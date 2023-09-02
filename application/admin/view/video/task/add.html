@@ -1,0 +1,133 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Title')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-title" class="form-control" name="row[title]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Content')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-content" class="form-control editor" rows="5" name="row[content]" cols="50"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Prompt_modes')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-prompt_modes" class="form-control selectpicker" name="row[prompt_modes]">
+                {foreach name="promptModesList" item="vo"}
+                    <option value="{$key}" {in name="key" value="1"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Lorajson')}:</label>
+        <div class="col-xs-12 col-sm-8">
+
+            <dl class="fieldlist" data-name="row[lorajson]">
+                <dd>
+                    <ins>{:__('Key')}</ins>
+                    <ins>{:__('Value')}</ins>
+                </dd>
+                <dd><a href="javascript:;" class="btn btn-sm btn-success btn-append"><i class="fa fa-plus"></i> {:__('Append')}</a></dd>
+                <textarea name="row[lorajson]" class="form-control hide" cols="30" rows="5"></textarea>
+            </dl>
+
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Batch_size')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-batch_size" class="form-control" name="row[batch_size]" type="number" value="1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Steps')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-steps" class="form-control" name="row[steps]" type="number" value="20">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Width')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-width" class="form-control" name="row[width]" type="number" value="512">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Height')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-height" class="form-control" name="row[height]" type="number" value="512">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Restore_faces_switch')}:</label>
+        <div class="col-xs-12 col-sm-8">
+
+            <input  id="c-restore_faces_switch" name="row[restore_faces_switch]" type="hidden" value="0">
+            <a href="javascript:;" data-toggle="switcher" class="btn-switcher" data-input-id="c-restore_faces_switch" data-yes="1" data-no="0" >
+                <i class="fa fa-toggle-on text-success fa-flip-horizontal text-gray fa-2x"></i>
+            </a>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Video_animation')}:</label>
+        <div class="col-xs-12 col-sm-8">
+
+            <select  id="c-video_animation" class="form-control selectpicker" name="row[video_animation]">
+                {foreach name="videoAnimationList" item="vo"}
+                <option value="{$key}" {in name="key" value="-2"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="" data-toggle="cxselect" data-selects="first,second">
+        <div class="form-group">
+            <label class="control-label col-xs-12 col-sm-2">{:__('Audio_voice_id')}:</label>
+            <div class="col-xs-12 col-sm-8">
+                <select class="first form-control" name="row[audio_voice_id]"
+                        data-url="ajax/category?type=voice&amp;pid=0" data-live-search="true" data-tokens="nickname" data-rule="required">
+                    <option value="14">知妙_多情感</option>
+                </select></br>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-12 col-sm-2">{:__('Audio_emotion_id')}:</label>
+            <div class="col-xs-12 col-sm-8">
+                <select class="second form-control" name="row[audio_emotion_id]" data-url="ajax/category"
+                        data-query-name="pid">
+                    <option value="121">小说</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Audio_volume')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-audio_volume" class="form-control" name="row[audio_volume]" type="number" value="50">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Audio_speech_rate')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-audio_speech_rate" class="form-control" name="row[audio_speech_rate]" type="number" value="100">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Audio_pitch_rate')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-audio_pitch_rate" class="form-control" name="row[audio_pitch_rate]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,239 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Fragment')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-fragment" class="form-control" name="row[fragment]" type="text" value="{$row.fragment|htmlentities}">
+        </div>
+    </div>
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Translation')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <textarea id="c-translation" class="form-control " rows="5" name="row[translation]" cols="50">{$row.translation|htmlentities}</textarea>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Positive_prompt')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-positive_prompt" class="form-control " rows="5" name="row[positive_prompt]" cols="50">{$row.positive_prompt|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Negative_prompt')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-negative_prompt" class="form-control " rows="5" name="row[negative_prompt]" cols="50">{$row.negative_prompt|htmlentities}</textarea>
+        </div>
+    </div>
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Videofile')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <div class="input-group">-->
+<!--                <input id="c-videofile" class="form-control" size="50" name="row[videofile]" type="text" value="{$row.videofile|htmlentities}">-->
+<!--                <div class="input-group-addon no-border no-padding">-->
+<!--                    <span><button type="button" id="faupload-videofile" class="btn btn-danger faupload" data-input-id="c-videofile" data-multiple="false" data-preview-id="p-videofile"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>-->
+<!--                    <span><button type="button" id="fachoose-videofile" class="btn btn-primary fachoose" data-input-id="c-videofile" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>-->
+<!--                </div>-->
+<!--                <span class="msg-box n-right" for="c-videofile"></span>-->
+<!--            </div>-->
+<!--            <ul class="row list-inline faupload-preview" id="p-videofile"></ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Weigh')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <input id="c-weigh" class="form-control" name="row[weigh]" type="number" value="{$row.weigh|htmlentities}">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Step')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--                        -->
+<!--            <select  id="c-step" class="form-control selectpicker" name="row[step]">-->
+<!--                {foreach name="stepList" item="vo"}-->
+<!--                    <option value="{$key}" {in name="key" value="$row.step"}selected{/in}>{$vo}</option>-->
+<!--                {/foreach}-->
+<!--            </select>-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Draw_status')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <input id="c-draw_status" class="form-control" name="row[draw_status]" type="number" value="{$row.draw_status|htmlentities}">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Stylestags')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <input id="c-stylestags" class="form-control" data-role="tagsinput" name="row[stylestags]" type="text" value="{$row.stylestags|htmlentities}">-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Batch_size')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-batch_size" class="form-control" name="row[batch_size]" type="number" value="{$row.batch_size|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Steps')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-steps" class="form-control" name="row[steps]" type="number" value="{$row.steps|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Width')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-width" class="form-control" name="row[width]" type="number" value="{$row.width|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Height')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-height" class="form-control" name="row[height]" type="number" value="{$row.height|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Restore_faces_switch')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <input  id="c-restore_faces_switch" name="row[restore_faces_switch]" type="hidden" value="{$row.restore_faces_switch}">
+            <a href="javascript:;" data-toggle="switcher" class="btn-switcher" data-input-id="c-restore_faces_switch" data-yes="1" data-no="0" >
+                <i class="fa fa-toggle-on text-success {eq name="$row.restore_faces_switch" value="0"}fa-flip-horizontal text-gray{/eq} fa-2x"></i>
+            </a>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Lorajson')}:</label>
+        <div class="col-xs-12 col-sm-8">
+
+            <dl class="fieldlist" data-name="row[lorajson]">
+                <dd>
+                    <ins>{:__('Key')}</ins>
+                    <ins>{:__('Value')}</ins>
+                </dd>
+                <dd><a href="javascript:;" class="btn btn-sm btn-success btn-append"><i class="fa fa-plus"></i> {:__('Append')}</a></dd>
+                <textarea name="row[lorajson]" class="form-control hide" cols="30" rows="5">{$row.lorajson|htmlentities}</textarea>
+            </dl>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Video_animation')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-video_animation" class="form-control selectpicker" name="row[video_animation]">
+                {foreach name="videoAnimationList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.video_animation"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Video_speed')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <input id="c-video_speed" class="form-control" name="row[video_speed]" type="number" value="{$row.video_speed|htmlentities}">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Video_fps')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <input id="c-video_fps" class="form-control" name="row[video_fps]" type="number" value="{$row.video_fps|htmlentities}">-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Audio_volume')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-audio_volume" class="form-control" name="row[audio_volume]" type="number" value="{$row.audio_volume|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Audio_speech_rate')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-audio_speech_rate" class="form-control" name="row[audio_speech_rate]" type="number" value="{$row.audio_speech_rate|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Audio_pitch_rate')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-audio_pitch_rate" class="form-control" name="row[audio_pitch_rate]" type="number" value="{$row.audio_pitch_rate|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Audio_duration')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-audio_duration" class="form-control" name="row[audio_duration]" type="text" value="{$row.audio_duration|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Prompt_modes')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-prompt_modes" class="form-control selectpicker" name="row[prompt_modes]">
+                {foreach name="promptModesList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.prompt_modes"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Default_positive_prompt')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-default_positive_prompt" class="form-control " rows="5" name="row[default_positive_prompt]" cols="50">{$row.default_positive_prompt|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Default_negative_prompt')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-default_negative_prompt" class="form-control " rows="5" name="row[default_negative_prompt]" cols="50">{$row.default_negative_prompt|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Images')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-images" class="form-control" size="50" name="row[images]" type="text" value="{$row.images|htmlentities}">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="faupload-images" class="btn btn-danger faupload" data-input-id="c-images" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp,image/webp" data-multiple="true" data-preview-id="p-images"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-images" class="btn btn-primary fachoose" data-input-id="c-images" data-mimetype="image/*" data-multiple="true"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-images"></span>
+            </div>
+            <ul class="row list-inline faupload-preview" id="p-images"></ul>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Image')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-image" class="form-control" size="50" name="row[image]" type="text" value="{$row.image|htmlentities}">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="faupload-image" class="btn btn-danger faupload" data-input-id="c-image" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp,image/webp" data-multiple="false" data-preview-id="p-image"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-image" class="btn btn-primary fachoose" data-input-id="c-image" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-image"></span>
+            </div>
+            <ul class="row list-inline faupload-preview" id="p-image"></ul>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Audiofile')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-audiofile" class="form-control" size="50" name="row[audiofile]" type="text" value="{$row.audiofile|htmlentities}">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="faupload-audiofile" class="btn btn-danger faupload" data-input-id="c-audiofile" data-multiple="false" data-preview-id="p-audiofile"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-audiofile" class="btn btn-primary fachoose" data-input-id="c-audiofile" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-audiofile"></span>
+            </div>
+            <ul class="row list-inline faupload-preview" id="p-audiofile"></ul>
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+        </div>
+    </div>
+</form>
